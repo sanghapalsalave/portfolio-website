@@ -3,8 +3,19 @@ import './App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode');
-    return saved ? JSON.parse(saved) : false;
+    try {
+      const saved = localStorage.getItem('darkMode');
+      return saved ? JSON.parse(saved) : false;
+    } catch (e) {
+      console.warn('localStorage unavailable or corrupted, defaulting to light mode:', e);
+      // Clear corrupted data if possible
+      try {
+        localStorage.removeItem('darkMode');
+      } catch (clearError) {
+        // Silently fail if we can't clear
+      }
+      return false;
+    }
   });
 
   const roles = [
@@ -51,7 +62,11 @@ function App() {
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    try {
+      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    } catch (e) {
+      console.warn('localStorage unavailable, theme will not persist:', e);
+    }
   }, [darkMode]);
 
   useEffect(() => {
@@ -74,7 +89,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar">
+      <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="nav-brand">SS</div>
         <div className="nav-links">
           <a href="#about">About</a>
@@ -83,6 +98,9 @@ function App() {
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
           <a href="#certifications">Certifications</a>
+          <a href="#services">Services</a>
+          <a href="#tutoring">Tutoring</a>
+          <a href="#mobile-apps">Mobile Apps</a>
           <button 
             className="theme-toggle" 
             onClick={() => setDarkMode(!darkMode)}
@@ -93,11 +111,14 @@ function App() {
         </div>
       </nav>
 
-      <header className="App-header">
+      <header className="App-header" role="banner">
         <img 
           src={process.env.PUBLIC_URL + '/profile.png'} 
-          alt="Sanghapal Salave" 
+          alt="Sanghapal Salave - Senior Software Engineer specializing in Java, Spring Boot, and Microservices" 
           className="profile-photo"
+          width="200"
+          height="200"
+          loading="eager"
         />
         <h1>Hi, I'm Sanghapal Salave</h1>
         <p className="title">
@@ -138,8 +159,9 @@ function App() {
         </div>
       </header>
       
-      <section className="about animate-section" id="about">
-        <h2>About Me</h2>
+      <main role="main">
+        <section className="about animate-section" id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
         <p>
           I'm a Senior Software Engineer based in Pune, Maharashtra, India with over 7 years 
           of experience in backend and enterprise-grade technologies. Currently working at 
@@ -152,8 +174,8 @@ function App() {
         </p>
       </section>
 
-      <section className="experience animate-section" id="experience">
-        <h2>Work Experience</h2>
+      <section className="experience animate-section" id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experience</h2>
         <div className="timeline">
           <div className="timeline-item">
             <div className="timeline-dot"></div>
@@ -219,8 +241,8 @@ function App() {
         </div>
       </section>
 
-      <section className="skills animate-section" id="skills">
-        <h2>Skills</h2>
+      <section className="skills animate-section" id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
         
         <div className="skills-container">
           <div className="skills-category">
@@ -345,8 +367,8 @@ function App() {
         </div>
       </section>
 
-      <section className="projects animate-section" id="projects">
-        <h2>Projects</h2>
+      <section className="projects animate-section" id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
         <div className="project-grid">
           <div className="project-card">
             <span className="project-badge">Globant</span>
@@ -385,8 +407,8 @@ function App() {
         </div>
       </section>
 
-      <section className="education animate-section" id="education">
-        <h2>Education</h2>
+      <section className="education animate-section" id="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
         <div className="education-grid">
           <div className="education-card">
             <h3>CDAC Pune</h3>
@@ -401,8 +423,8 @@ function App() {
         </div>
       </section>
 
-      <section className="certifications animate-section" id="certifications">
-        <h2>Certifications</h2>
+      <section className="certifications animate-section" id="certifications" aria-labelledby="certifications-heading">
+        <h2 id="certifications-heading">Certifications</h2>
         <div className="cert-grid">
           <div className="cert-card">
             <div className="cert-icon">☁️</div>
@@ -419,7 +441,275 @@ function App() {
         </div>
       </section>
 
-      <footer className="App-footer">
+      <section className="services animate-section" id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Freelance Services</h2>
+        <div className="services-content">
+          <div className="availability-badge">
+            <span className="status-indicator">🟢</span>
+            <span className="status-text">Open to Work</span>
+          </div>
+          <p className="services-description">
+            I'm available for freelance projects and consulting opportunities. With over 7 years 
+            of experience in enterprise software development, I can help you build scalable, 
+            high-performance applications tailored to your business needs.
+          </p>
+          <div className="services-technologies">
+            <h3>Technologies I Work With</h3>
+            <div className="tech-tags">
+              <span>Java</span>
+              <span>Python</span>
+              <span>Spring Boot</span>
+              <span>Microservices</span>
+              <span>AWS</span>
+              <span>GCP</span>
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>REST APIs</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div className="services-cta">
+            <a 
+              href="mailto:salave.sanghapal@gmail.com?subject=Project Inquiry" 
+              className="cta-button"
+            >
+              💼 Let's Work Together
+            </a>
+            <p className="contact-info">
+              Email: <a href="mailto:salave.sanghapal@gmail.com">salave.sanghapal@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="tutoring animate-section" id="tutoring" aria-labelledby="tutoring-heading">
+        <h2 id="tutoring-heading">Java Tutoring</h2>
+        <div className="tutoring-content">
+          <div className="tutoring-badge">
+            <span className="tutoring-icon">👨‍🏫</span>
+            <span className="tutoring-format">One-on-One Learning</span>
+          </div>
+          <p className="tutoring-description">
+            Master Java programming with personalized, one-on-one tutoring sessions. With over 7 years 
+            of professional experience in Java and Spring Boot, I offer tailored learning experiences 
+            for beginners to advanced developers looking to level up their skills.
+          </p>
+          <div className="tutoring-expertise">
+            <h3>What You'll Learn</h3>
+            <div className="expertise-grid">
+              <div className="expertise-item">
+                <span className="expertise-icon">☕</span>
+                <h4>Core Java</h4>
+                <p>OOP, Collections, Streams, Multithreading</p>
+              </div>
+              <div className="expertise-item">
+                <span className="expertise-icon">🚀</span>
+                <h4>Spring Boot</h4>
+                <p>REST APIs, Microservices, Security</p>
+              </div>
+              <div className="expertise-item">
+                <span className="expertise-icon">🏗️</span>
+                <h4>Best Practices</h4>
+                <p>Design Patterns, Clean Code, Testing</p>
+              </div>
+              <div className="expertise-item">
+                <span className="expertise-icon">💼</span>
+                <h4>Real-World Projects</h4>
+                <p>Enterprise-grade application development</p>
+              </div>
+            </div>
+          </div>
+          <div className="tutoring-details">
+            <div className="pricing-info">
+              <span className="paid-badge">💰 Paid Service</span>
+              <p className="pricing-note">Contact for pricing and availability</p>
+            </div>
+          </div>
+          <div className="tutoring-cta">
+            <a 
+              href="mailto:salave.sanghapal@gmail.com?subject=Java Tutoring Inquiry" 
+              className="cta-button"
+            >
+              📅 Schedule a Session
+            </a>
+            <p className="contact-info">
+              Email: <a href="mailto:salave.sanghapal@gmail.com">salave.sanghapal@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mobile-apps animate-section" id="mobile-apps" aria-labelledby="mobile-apps-heading">
+        <h2 id="mobile-apps-heading">Mobile Applications</h2>
+        <div className="mobile-apps-content">
+          <p className="mobile-apps-intro">
+            Explore my mobile application projects showcasing cross-platform development 
+            expertise and modern mobile technologies.
+          </p>
+          <div className="apps-grid">
+            <div className="app-card">
+              <div className="app-header">
+                <div className="app-icon">📱</div>
+                <div className="app-title-section">
+                  <h3>Task Manager Pro</h3>
+                  <div className="platform-badges">
+                    <span className="platform-badge ios">🍎 iOS</span>
+                    <span className="platform-badge android">🤖 Android</span>
+                  </div>
+                </div>
+              </div>
+              <p className="app-description">
+                A comprehensive task management application with real-time synchronization, 
+                collaborative features, and intelligent task prioritization. Built with 
+                React Native for seamless cross-platform experience.
+              </p>
+              <div className="app-screenshots">
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 1</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 2</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 3</p>
+                </div>
+              </div>
+              <div className="app-tech-stack">
+                <h4>Technology Stack</h4>
+                <div className="app-tech-tags">
+                  <span>React Native</span>
+                  <span>TypeScript</span>
+                  <span>Redux</span>
+                  <span>Firebase</span>
+                  <span>REST API</span>
+                </div>
+              </div>
+              <div className="app-links">
+                <a href="#mobile-apps" className="app-store-link">
+                  <span className="store-icon">🍎</span>
+                  <span>App Store</span>
+                </a>
+                <a href="#mobile-apps" className="app-store-link">
+                  <span className="store-icon">🤖</span>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="app-card">
+              <div className="app-header">
+                <div className="app-icon">🏋️</div>
+                <div className="app-title-section">
+                  <h3>Fitness Tracker</h3>
+                  <div className="platform-badges">
+                    <span className="platform-badge ios">🍎 iOS</span>
+                    <span className="platform-badge android">🤖 Android</span>
+                    <span className="platform-badge web">🌐 Web</span>
+                  </div>
+                </div>
+              </div>
+              <p className="app-description">
+                Track your fitness journey with personalized workout plans, nutrition tracking, 
+                and progress analytics. Features integration with wearable devices and social 
+                sharing capabilities.
+              </p>
+              <div className="app-screenshots">
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 1</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 2</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 3</p>
+                </div>
+              </div>
+              <div className="app-tech-stack">
+                <h4>Technology Stack</h4>
+                <div className="app-tech-tags">
+                  <span>Flutter</span>
+                  <span>Dart</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>GraphQL</span>
+                </div>
+              </div>
+              <div className="app-links">
+                <a href="#mobile-apps" className="app-store-link">
+                  <span className="store-icon">🍎</span>
+                  <span>App Store</span>
+                </a>
+                <a href="#mobile-apps" className="app-store-link">
+                  <span className="store-icon">🤖</span>
+                  <span>Google Play</span>
+                </a>
+                <a href="#mobile-apps" className="app-store-link demo">
+                  <span className="store-icon">🎬</span>
+                  <span>View Demo</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="app-card">
+              <div className="app-header">
+                <div className="app-icon">💰</div>
+                <div className="app-title-section">
+                  <h3>Budget Planner</h3>
+                  <div className="platform-badges">
+                    <span className="platform-badge android">🤖 Android</span>
+                  </div>
+                </div>
+              </div>
+              <p className="app-description">
+                Smart budget management app with expense tracking, bill reminders, and 
+                financial insights. Uses machine learning to provide personalized savings 
+                recommendations and spending patterns analysis.
+              </p>
+              <div className="app-screenshots">
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 1</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 2</p>
+                </div>
+                <div className="screenshot-placeholder">
+                  <span>📸</span>
+                  <p>Screenshot 3</p>
+                </div>
+              </div>
+              <div className="app-tech-stack">
+                <h4>Technology Stack</h4>
+                <div className="app-tech-tags">
+                  <span>Kotlin</span>
+                  <span>Android SDK</span>
+                  <span>Room DB</span>
+                  <span>Retrofit</span>
+                  <span>MVVM</span>
+                </div>
+              </div>
+              <div className="app-links">
+                <a href="#mobile-apps" className="app-store-link">
+                  <span className="store-icon">🤖</span>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
+
+      <footer className="App-footer" role="contentinfo">
         <p>&copy; 2026 Sanghapal Salave. All rights reserved.</p>
       </footer>
 

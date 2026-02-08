@@ -13,13 +13,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",    
-  "deploy": "gh-pages -d build"  
- },
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "fast-check": "^4.5.3",
+    "gh-pages": "^6.1.1",
+    "jest-axe": "^10.0.0"
   }
 }

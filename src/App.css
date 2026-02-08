@@ -170,13 +170,13 @@ html {
 }
 
 /* Sections */
-.about, .projects, .skills, .experience, .education, .certifications {
+.about, .projects, .skills, .experience, .education, .certifications, .services {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.about h2, .projects h2, .skills h2, .experience h2, .education h2, .certifications h2 {
+.about h2, .projects h2, .skills h2, .experience h2, .education h2, .certifications h2, .services h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #282c34;
@@ -468,6 +468,468 @@ body.dark-mode .skill-bar {
   font-size: 0.9rem;
 }
 
+/* Services Section */
+.services-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.status-indicator {
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.services-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.services-technologies {
+  margin-bottom: 2.5rem;
+}
+
+.services-technologies h3 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tech-tags span {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.tech-tags span:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.services-cta {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.contact-info a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Tutoring Section */
+.tutoring {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutoring h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #282c34;
+}
+
+.tutoring-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tutoring-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+}
+
+.tutoring-icon {
+  font-size: 1.3rem;
+}
+
+.tutoring-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.tutoring-expertise {
+  margin-bottom: 2.5rem;
+}
+
+.tutoring-expertise h3 {
+  color: #f5576c;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.expertise-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.expertise-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(245, 87, 108, 0.2);
+  border-color: #f5576c;
+}
+
+.expertise-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.expertise-item h4 {
+  color: #282c34;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-item p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.tutoring-details {
+  margin-bottom: 2rem;
+}
+
+.pricing-info {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.paid-badge {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #856404;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-note {
+  color: #856404;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.tutoring-cta {
+  margin-top: 2rem;
+}
+
+/* Mobile Apps Section */
+.mobile-apps {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mobile-apps h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #282c34;
+}
+
+.mobile-apps-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mobile-apps-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.app-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.app-title-section {
+  flex: 1;
+}
+
+.app-card h3 {
+  color: #282c34;
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+.platform-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.platform-badge.ios {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.platform-badge.android {
+  background: linear-gradient(135deg, #3ddc84 0%, #00c853 100%);
+  color: white;
+}
+
+.platform-badge.web {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.app-description {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.app-screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.screenshot-placeholder {
+  background: #e9ecef;
+  border-radius: 10px;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  border: 2px dashed #ced4da;
+  transition: all 0.3s ease;
+}
+
+.screenshot-placeholder:hover {
+  background: #dee2e6;
+  border-color: #adb5bd;
+}
+
+.screenshot-placeholder span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.screenshot-placeholder p {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.app-tech-stack {
+  margin-bottom: 1.5rem;
+}
+
+.app-tech-stack h4 {
+  color: #667eea;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.app-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.app-tech-tags span {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.4rem 0.9rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.app-tech-tags span:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.app-store-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.app-store-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.app-store-link.demo {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 2px 10px rgba(240, 147, 251, 0.3);
+}
+
+.app-store-link.demo:hover {
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.5);
+}
+
+.store-icon {
+  font-size: 1.1rem;
+}
+
 /* Footer */
 .App-footer {
   background-color: #282c34;
@@ -502,8 +964,28 @@ body.dark-mode .skill-bar {
     font-size: 0.9rem;
   }
   
-  .about h2, .projects h2, .skills h2, .experience h2, .education h2, .certifications h2 {
+  .about h2, .projects h2, .skills h2, .experience h2, .education h2, .certifications h2, .services h2, .tutoring h2, .mobile-apps h2 {
     font-size: 2rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .app-links {
+    flex-direction: column;
+  }
+
+  .app-store-link {
+    justify-content: center;
   }
 
   .timeline {
@@ -538,7 +1020,10 @@ body.dark-mode .skills,
 body.dark-mode .projects,
 body.dark-mode .experience,
 body.dark-mode .education,
-body.dark-mode .certifications {
+body.dark-mode .certifications,
+body.dark-mode .services,
+body.dark-mode .tutoring,
+body.dark-mode .mobile-apps {
   background-color: #1a1a2e;
 }
 
@@ -547,7 +1032,10 @@ body.dark-mode .skills h2,
 body.dark-mode .projects h2,
 body.dark-mode .experience h2,
 body.dark-mode .education h2,
-body.dark-mode .certifications h2 {
+body.dark-mode .certifications h2,
+body.dark-mode .services h2,
+body.dark-mode .tutoring h2,
+body.dark-mode .mobile-apps h2 {
   color: #eaeaea;
 }
 
@@ -587,6 +1075,120 @@ body.dark-mode .project-tech span {
 
 body.dark-mode .App-footer {
   background-color: #0f0f1a;
+}
+
+body.dark-mode .services-description {
+  color: #b0b0b0;
+}
+
+body.dark-mode .services-technologies h3 {
+  color: #61dafb;
+}
+
+body.dark-mode .tech-tags span {
+  background: #16213e;
+  color: #eaeaea;
+  border-color: #0f3460;
+}
+
+body.dark-mode .tech-tags span:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+body.dark-mode .contact-info {
+  color: #b0b0b0;
+}
+
+body.dark-mode .contact-info a {
+  color: #61dafb;
+}
+
+body.dark-mode .contact-info a:hover {
+  color: #667eea;
+}
+
+body.dark-mode .tutoring-description {
+  color: #b0b0b0;
+}
+
+body.dark-mode .tutoring-expertise h3 {
+  color: #f093fb;
+}
+
+body.dark-mode .expertise-item {
+  background: #16213e;
+  border-color: #0f3460;
+}
+
+body.dark-mode .expertise-item:hover {
+  border-color: #f5576c;
+}
+
+body.dark-mode .expertise-item h4 {
+  color: #eaeaea;
+}
+
+body.dark-mode .expertise-item p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .pricing-info {
+  background: #2d2d2d;
+  border-color: #ffc107;
+}
+
+body.dark-mode .paid-badge,
+body.dark-mode .pricing-note {
+  color: #ffc107;
+}
+
+body.dark-mode .mobile-apps-intro {
+  color: #b0b0b0;
+}
+
+body.dark-mode .app-card {
+  background: #16213e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .app-card h3 {
+  color: #eaeaea;
+}
+
+body.dark-mode .app-description {
+  color: #b0b0b0;
+}
+
+body.dark-mode .screenshot-placeholder {
+  background: #0f3460;
+  border-color: #16213e;
+}
+
+body.dark-mode .screenshot-placeholder:hover {
+  background: #1a4d7a;
+  border-color: #667eea;
+}
+
+body.dark-mode .screenshot-placeholder p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .app-tech-stack h4 {
+  color: #61dafb;
+}
+
+body.dark-mode .app-tech-tags span {
+  background: #0f3460;
+  color: #eaeaea;
+  border-color: #16213e;
+}
+
+body.dark-mode .app-tech-tags span:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
 }
 
 /* Scroll to Top Button */
