@@ -99,8 +99,8 @@ function App() {
           <a href="#education">Education</a>
           <a href="#certifications">Certifications</a>
           <a href="#services">Services</a>
-          <a href="#tutoring">Tutoring</a>
-          <a href="#mobile-apps">Mobile Apps</a>
+          <a href="#tutoring">Mentorship</a>
+          <a href="#testimonials">Contact</a>
           <button 
             className="theme-toggle" 
             onClick={() => setDarkMode(!darkMode)}
@@ -125,7 +125,7 @@ function App() {
           <span className="typing-text">{displayText}</span>
           <span className="cursor">|</span>
         </p>
-        <p className="subtitle">7+ Years of Experience | Java | Spring Boot | Microservices | GCP</p>
+        <p className="subtitle">8+ Years of Experience | Java | Spring Boot | Microservices | GCP</p>
         <div className="links">
           <a 
             href="https://github.com/sanghapalsalave" 
@@ -144,10 +144,18 @@ function App() {
             LinkedIn
           </a>
           <a 
+            href="https://wa.me/918087502702" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="App-link whatsapp-link"
+          >
+            📱 WhatsApp
+          </a>
+          <a 
             href="mailto:salave.sanghapal@gmail.com"
             className="App-link"
           >
-            Contact
+            Email
           </a>
           <a 
             href={process.env.PUBLIC_URL + '/resume.pdf'}
@@ -283,6 +291,24 @@ function App() {
                 <div className="skill-progress" style={{width: '90%'}}></div>
               </div>
             </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>Python</span>
+                <span>80%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '80%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>FastAPI</span>
+                <span>75%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '75%'}}></div>
+              </div>
+            </div>
           </div>
 
           <div className="skills-category">
@@ -356,11 +382,69 @@ function App() {
             </div>
             <div className="skill-bar-item">
               <div className="skill-info">
+                <span>Supabase</span>
+                <span>70%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '70%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>React Native</span>
+                <span>65%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '65%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>Expo Go</span>
+                <span>65%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '65%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
                 <span>Git</span>
                 <span>85%</span>
               </div>
               <div className="skill-bar">
                 <div className="skill-progress" style={{width: '85%'}}></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="skills-category">
+            <h3>Development Practices</h3>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>AI-Assisted Development</span>
+                <span>90%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '90%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>Vibe Coding</span>
+                <span>85%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '85%'}}></div>
+              </div>
+            </div>
+            <div className="skill-bar-item">
+              <div className="skill-info">
+                <span>Bug Fixing & Debugging</span>
+                <span>90%</span>
+              </div>
+              <div className="skill-bar">
+                <div className="skill-progress" style={{width: '90%'}}></div>
               </div>
             </div>
           </div>
@@ -446,38 +530,98 @@ function App() {
         <div className="services-content">
           <div className="availability-badge">
             <span className="status-indicator">🟢</span>
-            <span className="status-text">Open to Work</span>
+            <span className="status-text">Available for New Projects</span>
           </div>
           <p className="services-description">
-            I'm available for freelance projects and consulting opportunities. With over 7 years 
-            of experience in enterprise software development, I can help you build scalable, 
-            high-performance applications tailored to your business needs.
+            Senior Software Engineer with 8+ years of enterprise experience, now offering freelance services. 
+            I bring proven expertise from working with global companies like Globant and Infosys, delivering 
+            scalable microservices and cloud-native solutions. Let's build something great together!
           </p>
+          
+          <div className="services-value-props">
+            <div className="value-prop">
+              <span className="value-icon">⚡</span>
+              <h4>Fast Delivery</h4>
+              <p>Efficient development with clean, maintainable code</p>
+            </div>
+            <div className="value-prop">
+              <span className="value-icon">🎯</span>
+              <h4>Quality Focused</h4>
+              <p>Enterprise-grade solutions with best practices</p>
+            </div>
+            <div className="value-prop">
+              <span className="value-icon">💬</span>
+              <h4>Clear Communication</h4>
+              <p>Regular updates and transparent collaboration</p>
+            </div>
+            <div className="value-prop">
+              <span className="value-icon">🔒</span>
+              <h4>Reliable & Professional</h4>
+              <p>8+ years of proven track record</p>
+            </div>
+          </div>
+
           <div className="services-technologies">
             <h3>Technologies I Work With</h3>
             <div className="tech-tags">
               <span>Java</span>
               <span>Python</span>
               <span>Spring Boot</span>
+              <span>FastAPI</span>
               <span>Microservices</span>
               <span>AWS</span>
               <span>GCP</span>
               <span>React</span>
+              <span>React Native</span>
+              <span>Expo Go</span>
               <span>JavaScript</span>
               <span>Docker</span>
               <span>Kubernetes</span>
+              <span>Supabase</span>
               <span>REST APIs</span>
               <span>MySQL</span>
             </div>
           </div>
+          <div className="services-pricing">
+            <h3>Investment</h3>
+            <div className="pricing-tiers">
+              <div className="pricing-tier">
+                <span className="tier-label">🇮🇳 For Indian Clients</span>
+                <p className="hourly-rate">
+                  <span className="rate-amount">₹599/hour</span>
+                </p>
+              </div>
+              <div className="pricing-tier">
+                <span className="tier-label">🌍 For International Clients</span>
+                <p className="hourly-rate">
+                  <span className="rate-amount">$60/hour</span>
+                </p>
+              </div>
+            </div>
+            <p className="pricing-note">Competitive rates for senior-level expertise • Flexible packages available</p>
+            <p className="pricing-details">
+              💡 <strong>First consultation free</strong> - Let's discuss your project needs<br />
+              📦 <strong>Project-based pricing available</strong> - Fixed quotes for defined scope<br />
+              🎁 <strong>Package discounts</strong> - Save up to 20% on bulk hours
+            </p>
+          </div>
           <div className="services-cta">
+            <a 
+              href="https://wa.me/918087502702?text=Hi%20Sanghapal%2C%20I'm%20interested%20in%20discussing%20a%20project" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button whatsapp-cta"
+            >
+              📱 Quick Chat on WhatsApp
+            </a>
             <a 
               href="mailto:salave.sanghapal@gmail.com?subject=Project Inquiry" 
               className="cta-button"
             >
-              💼 Let's Work Together
+              💼 Email for Detailed Discussion
             </a>
             <p className="contact-info">
+              WhatsApp: <a href="https://wa.me/918087502702" target="_blank" rel="noopener noreferrer">+91 8087502702</a><br />
               Email: <a href="mailto:salave.sanghapal@gmail.com">salave.sanghapal@gmail.com</a>
             </p>
           </div>
@@ -485,224 +629,153 @@ function App() {
       </section>
 
       <section className="tutoring animate-section" id="tutoring" aria-labelledby="tutoring-heading">
-        <h2 id="tutoring-heading">Java Tutoring</h2>
+        <h2 id="tutoring-heading">Java Programming Mentorship</h2>
         <div className="tutoring-content">
           <div className="tutoring-badge">
             <span className="tutoring-icon">👨‍🏫</span>
-            <span className="tutoring-format">One-on-One Learning</span>
+            <span className="tutoring-format">Personalized 1-on-1 Sessions</span>
           </div>
           <p className="tutoring-description">
-            Master Java programming with personalized, one-on-one tutoring sessions. With over 7 years 
-            of professional experience in Java and Spring Boot, I offer tailored learning experiences 
-            for beginners to advanced developers looking to level up their skills.
+            Learn Java from a senior engineer with 8+ years of production experience. Whether you're 
+            starting your programming journey or advancing your skills, I offer personalized mentorship 
+            tailored to your goals. Real-world insights from enterprise projects at Globant and Infosys.
           </p>
           <div className="tutoring-expertise">
-            <h3>What You'll Learn</h3>
+            <h3>What You'll Master</h3>
             <div className="expertise-grid">
               <div className="expertise-item">
                 <span className="expertise-icon">☕</span>
-                <h4>Core Java</h4>
-                <p>OOP, Collections, Streams, Multithreading</p>
+                <h4>Core Java Fundamentals</h4>
+                <p>OOP, Collections, Streams, Exception Handling, Multithreading</p>
               </div>
               <div className="expertise-item">
                 <span className="expertise-icon">🚀</span>
-                <h4>Spring Boot</h4>
-                <p>REST APIs, Microservices, Security</p>
+                <h4>Spring Boot & Microservices</h4>
+                <p>REST APIs, Spring Security, JPA, Microservices Architecture</p>
               </div>
               <div className="expertise-item">
                 <span className="expertise-icon">🏗️</span>
-                <h4>Best Practices</h4>
-                <p>Design Patterns, Clean Code, Testing</p>
+                <h4>Industry Best Practices</h4>
+                <p>Design Patterns, Clean Code, Testing, Code Reviews</p>
               </div>
               <div className="expertise-item">
                 <span className="expertise-icon">💼</span>
-                <h4>Real-World Projects</h4>
-                <p>Enterprise-grade application development</p>
+                <h4>Career Guidance</h4>
+                <p>Interview prep, Resume tips, Real-world project guidance</p>
               </div>
             </div>
           </div>
+          
+          <div className="tutoring-benefits">
+            <h3>Why Learn With Me?</h3>
+            <ul>
+              <li>✅ <strong>Real Production Experience:</strong> Learn from actual enterprise projects</li>
+              <li>✅ <strong>Flexible Scheduling:</strong> Sessions that fit your timezone and schedule</li>
+              <li>✅ <strong>Practical Approach:</strong> Hands-on coding, not just theory</li>
+              <li>✅ <strong>Career Support:</strong> Interview preparation and job search guidance</li>
+              <li>✅ <strong>Ongoing Support:</strong> Questions answered between sessions</li>
+            </ul>
+          </div>
+
           <div className="tutoring-details">
             <div className="pricing-info">
-              <span className="paid-badge">💰 Paid Service</span>
-              <p className="pricing-note">Contact for pricing and availability</p>
+              <span className="paid-badge">💰 Professional Mentorship</span>
+              <div className="pricing-tiers">
+                <div className="pricing-tier">
+                  <span className="tier-label">🇮🇳 For Indian Students</span>
+                  <p className="pricing-rate">
+                    <span className="rate-amount">₹99/hour</span>
+                  </p>
+                </div>
+                <div className="pricing-tier">
+                  <span className="tier-label">🌍 For International Students</span>
+                  <p className="pricing-rate">
+                    <span className="rate-amount">$45/hour</span>
+                  </p>
+                </div>
+              </div>
+              <p className="pricing-note">
+                <strong>🎁 First session FREE (30 min)</strong> - Let's discuss your learning goals<br />
+                📦 Package discounts available - Save up to 25% on multiple sessions<br />
+                💬 Email support between sessions included
+              </p>
             </div>
           </div>
           <div className="tutoring-cta">
             <a 
-              href="mailto:salave.sanghapal@gmail.com?subject=Java Tutoring Inquiry" 
+              href="https://wa.me/918087502702?text=Hi%20Sanghapal%2C%20I'm%20interested%20in%20Java%20mentorship.%20Can%20we%20schedule%20a%20free%20intro%20session%3F" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button whatsapp-cta"
+            >
+              📱 Book Free Intro Session
+            </a>
+            <a 
+              href="mailto:salave.sanghapal@gmail.com?subject=Java Mentorship Inquiry" 
               className="cta-button"
             >
-              📅 Schedule a Session
+              📅 Email to Schedule
             </a>
             <p className="contact-info">
+              WhatsApp: <a href="https://wa.me/918087502702" target="_blank" rel="noopener noreferrer">+91 8087502702</a><br />
               Email: <a href="mailto:salave.sanghapal@gmail.com">salave.sanghapal@gmail.com</a>
             </p>
           </div>
         </div>
       </section>
 
-      <section className="mobile-apps animate-section" id="mobile-apps" aria-labelledby="mobile-apps-heading">
-        <h2 id="mobile-apps-heading">Mobile Applications</h2>
-        <div className="mobile-apps-content">
-          <p className="mobile-apps-intro">
-            Explore my mobile application projects showcasing cross-platform development 
-            expertise and modern mobile technologies.
+      <section className="testimonials animate-section" id="testimonials" aria-labelledby="testimonials-heading">
+        <h2 id="testimonials-heading">Let's Build Your Next Project</h2>
+        <div className="testimonials-content">
+          <p className="testimonials-intro">
+            Ready to start your project? I'm here to help bring your ideas to life with clean, 
+            scalable code and professional service. Let's discuss how we can work together.
           </p>
-          <div className="apps-grid">
-            <div className="app-card">
-              <div className="app-header">
-                <div className="app-icon">📱</div>
-                <div className="app-title-section">
-                  <h3>Task Manager Pro</h3>
-                  <div className="platform-badges">
-                    <span className="platform-badge ios">🍎 iOS</span>
-                    <span className="platform-badge android">🤖 Android</span>
-                  </div>
-                </div>
+          
+          <div className="work-process">
+            <h3>How We'll Work Together</h3>
+            <div className="process-steps">
+              <div className="process-step">
+                <span className="step-number">1</span>
+                <h4>Free Consultation</h4>
+                <p>We'll discuss your project requirements, timeline, and goals</p>
               </div>
-              <p className="app-description">
-                A comprehensive task management application with real-time synchronization, 
-                collaborative features, and intelligent task prioritization. Built with 
-                React Native for seamless cross-platform experience.
-              </p>
-              <div className="app-screenshots">
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 1</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 2</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 3</p>
-                </div>
+              <div className="process-step">
+                <span className="step-number">2</span>
+                <h4>Proposal & Quote</h4>
+                <p>I'll provide a detailed proposal with timeline and fixed/hourly pricing</p>
               </div>
-              <div className="app-tech-stack">
-                <h4>Technology Stack</h4>
-                <div className="app-tech-tags">
-                  <span>React Native</span>
-                  <span>TypeScript</span>
-                  <span>Redux</span>
-                  <span>Firebase</span>
-                  <span>REST API</span>
-                </div>
+              <div className="process-step">
+                <span className="step-number">3</span>
+                <h4>Development</h4>
+                <p>Regular updates, clean code, and transparent communication throughout</p>
               </div>
-              <div className="app-links">
-                <a href="#mobile-apps" className="app-store-link">
-                  <span className="store-icon">🍎</span>
-                  <span>App Store</span>
-                </a>
-                <a href="#mobile-apps" className="app-store-link">
-                  <span className="store-icon">🤖</span>
-                  <span>Google Play</span>
-                </a>
+              <div className="process-step">
+                <span className="step-number">4</span>
+                <h4>Delivery & Support</h4>
+                <p>Thorough testing, documentation, and post-launch support</p>
               </div>
             </div>
+          </div>
 
-            <div className="app-card">
-              <div className="app-header">
-                <div className="app-icon">🏋️</div>
-                <div className="app-title-section">
-                  <h3>Fitness Tracker</h3>
-                  <div className="platform-badges">
-                    <span className="platform-badge ios">🍎 iOS</span>
-                    <span className="platform-badge android">🤖 Android</span>
-                    <span className="platform-badge web">🌐 Web</span>
-                  </div>
-                </div>
-              </div>
-              <p className="app-description">
-                Track your fitness journey with personalized workout plans, nutrition tracking, 
-                and progress analytics. Features integration with wearable devices and social 
-                sharing capabilities.
-              </p>
-              <div className="app-screenshots">
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 1</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 2</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 3</p>
-                </div>
-              </div>
-              <div className="app-tech-stack">
-                <h4>Technology Stack</h4>
-                <div className="app-tech-tags">
-                  <span>Flutter</span>
-                  <span>Dart</span>
-                  <span>Node.js</span>
-                  <span>MongoDB</span>
-                  <span>GraphQL</span>
-                </div>
-              </div>
-              <div className="app-links">
-                <a href="#mobile-apps" className="app-store-link">
-                  <span className="store-icon">🍎</span>
-                  <span>App Store</span>
-                </a>
-                <a href="#mobile-apps" className="app-store-link">
-                  <span className="store-icon">🤖</span>
-                  <span>Google Play</span>
-                </a>
-                <a href="#mobile-apps" className="app-store-link demo">
-                  <span className="store-icon">🎬</span>
-                  <span>View Demo</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="app-card">
-              <div className="app-header">
-                <div className="app-icon">💰</div>
-                <div className="app-title-section">
-                  <h3>Budget Planner</h3>
-                  <div className="platform-badges">
-                    <span className="platform-badge android">🤖 Android</span>
-                  </div>
-                </div>
-              </div>
-              <p className="app-description">
-                Smart budget management app with expense tracking, bill reminders, and 
-                financial insights. Uses machine learning to provide personalized savings 
-                recommendations and spending patterns analysis.
-              </p>
-              <div className="app-screenshots">
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 1</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 2</p>
-                </div>
-                <div className="screenshot-placeholder">
-                  <span>📸</span>
-                  <p>Screenshot 3</p>
-                </div>
-              </div>
-              <div className="app-tech-stack">
-                <h4>Technology Stack</h4>
-                <div className="app-tech-tags">
-                  <span>Kotlin</span>
-                  <span>Android SDK</span>
-                  <span>Room DB</span>
-                  <span>Retrofit</span>
-                  <span>MVVM</span>
-                </div>
-              </div>
-              <div className="app-links">
-                <a href="#mobile-apps" className="app-store-link">
-                  <span className="store-icon">🤖</span>
-                  <span>Google Play</span>
-                </a>
-              </div>
+          <div className="cta-section">
+            <h3>Ready to Get Started?</h3>
+            <p>Let's turn your vision into reality. Contact me today for a free consultation.</p>
+            <div className="cta-buttons">
+              <a 
+                href="https://wa.me/918087502702?text=Hi%20Sanghapal%2C%20I'd%20like%20to%20discuss%20a%20project" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-button whatsapp-cta primary"
+              >
+                📱 WhatsApp Me Now
+              </a>
+              <a 
+                href="mailto:salave.sanghapal@gmail.com?subject=Project Discussion" 
+                className="cta-button secondary"
+              >
+                📧 Send Email
+              </a>
             </div>
           </div>
         </div>

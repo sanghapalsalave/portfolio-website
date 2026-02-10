@@ -135,23 +135,27 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
 - [ ] 8. Implement and test skills section
   - [~] 8.1 Create skills section with categorized display
     - Implement grid layout for skill categories
+    - Add new "Development Practices" category with Vibe coding and AI-assisted development
+    - Add FastAPI to Backend & Languages category
+    - Add Supabase, React Native, and Expo Go to Frontend & Database category
     - Create skill bar component with name and percentage
     - Add visual progress bar with gradient fill
     - Set bar width based on proficiency percentage
-    - _Requirements: 8.1, 8.5_
+    - _Requirements: 8.1, 8.5, 8.6, 8.7, 8.8, 8.9_
   
   - [ ]* 8.2 Write property test for skill bar display
     - **Property 10: Skill Bars Display Name and Proficiency**
-    - **Validates: Requirements 8.2, 8.3**
+    - **Validates: Requirements 8.2, 8.3, 8.6, 8.7, 8.8, 8.9**
   
   - [ ]* 8.3 Write property test for skill bar width
     - **Property 11: Skill Bar Width Matches Proficiency**
     - **Validates: Requirements 8.4**
   
   - [ ]* 8.4 Write unit tests for skills structure
-    - Test categories render correctly
+    - Test categories render correctly (including new Development Practices category)
+    - Test new skills appear in correct categories
     - Test grid layout structure
-    - _Requirements: 8.1, 8.5_
+    - _Requirements: 8.1, 8.5, 8.6, 8.7, 8.8, 8.9_
 
 - [ ] 9. Implement and test projects section
   - [~] 9.1 Create project cards with grid layout
@@ -434,57 +438,61 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
   - [x] 20.1 Create Services section component
     - Implement section structure with "Open to Work" indicator
     - Add availability badge or status display
-    - List technologies (Python, Java, AWS, React, JavaScript, etc.)
+    - List technologies (Python, Java, AWS, React, JavaScript, FastAPI, Supabase, React Native, Expo Go, etc.)
     - Add service description highlighting freelance capabilities
+    - Add hourly rate display with professional formatting (rate, currency, formatted display)
     - Create call-to-action button for project inquiries
     - Add contact information or link to contact form
     - Apply entrance animation class
-    - _Requirements: 19.1, 19.2, 19.3, 19.4, 19.5, 19.6_
+    - _Requirements: 19.1, 19.2, 19.3, 19.4, 19.5, 19.6, 19.7, 19.8_
   
   - [ ]* 20.2 Write property test for services section display
     - **Property 21: Services Section Display**
-    - **Validates: Requirements 19.1, 19.2, 19.3, 19.4**
+    - **Validates: Requirements 19.1, 19.2, 19.3, 19.4, 19.7, 19.8**
   
   - [ ]* 20.3 Write unit tests for Services section
     - Test section renders with all required elements
     - Test availability badge displays correctly
-    - Test technology tags render
+    - Test technology tags render (including new skills)
+    - Test hourly rate displays in correct format
     - Test call-to-action button has correct link
-    - _Requirements: 19.1, 19.2, 19.3, 19.4, 19.5_
+    - _Requirements: 19.1, 19.2, 19.3, 19.4, 19.5, 19.7, 19.8_
 
 - [ ] 21. Implement and test Tutoring section (Java learning)
   - [x] 21.1 Create Tutoring section component
     - Implement section structure for Java tutoring services
     - Add heading and service description
     - Indicate paid service and one-on-one call format
-    - Add pricing information or "Contact for pricing" note
+    - Add hourly rate display with professional formatting (rate, currency, formatted display)
     - Highlight Java expertise and teaching approach
     - Create scheduling/booking call-to-action (calendar link, contact form, or email)
     - Apply entrance animation class
-    - _Requirements: 20.1, 20.2, 20.3, 20.4, 20.5, 20.6_
+    - _Requirements: 20.1, 20.2, 20.3, 20.4, 20.5, 20.6, 20.7_
   
   - [ ]* 21.2 Write property test for tutoring section display
     - **Property 22: Tutoring Section Display**
-    - **Validates: Requirements 20.1, 20.2, 20.3, 20.4**
+    - **Validates: Requirements 20.1, 20.2, 20.3, 20.4, 20.6, 20.7**
   
   - [ ]* 21.3 Write unit tests for Tutoring section
     - Test section renders with all required elements
     - Test paid service indication is clear
+    - Test hourly rate displays in correct format
     - Test scheduling call-to-action has correct link
     - Test Java expertise highlights display
-    - _Requirements: 20.1, 20.2, 20.3, 20.4, 20.5_
+    - _Requirements: 20.1, 20.2, 20.3, 20.4, 20.5, 20.6, 20.7_
 
 - [ ] 22. Implement and test Mobile Apps section (App showcase)
   - [x] 22.1 Create Mobile Apps section component
     - Implement card-based or gallery layout for apps
     - Add app name, description, and screenshots for each app
-    - Display technology stack tags for each app
+    - Display technology stack tags for each app (including React Native, Expo Go where applicable)
     - Add platform badges (iOS, Android, Web)
     - Include app store links (Google Play, App Store) where applicable
     - Add demo video or interactive preview support
+    - Add hourly rate display for mobile app development services with professional formatting
     - Implement responsive image display
     - Apply entrance animation class
-    - _Requirements: 21.1, 21.2, 21.3, 21.4, 21.5, 21.6, 21.7_
+    - _Requirements: 21.1, 21.2, 21.3, 21.4, 21.5, 21.6, 21.7, 21.8, 21.9_
   
   - [~] 22.2 Add screenshot carousel or lightbox functionality
     - Implement image carousel for multiple screenshots
@@ -495,15 +503,17 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
   
   - [ ]* 22.3 Write property test for mobile app card fields
     - **Property 23: Mobile App Cards Display Required Fields**
-    - **Validates: Requirements 21.2, 21.3, 21.4**
+    - **Validates: Requirements 21.2, 21.3, 21.4, 21.8, 21.9**
   
   - [ ]* 22.4 Write unit tests for Mobile Apps section
     - Test app cards render with all required fields
     - Test screenshot display and carousel functionality
     - Test platform badges display correctly
     - Test app store links have correct URLs
+    - Test technology tags include React Native and Expo Go where applicable
+    - Test hourly rate displays in correct format
     - Test responsive layout behavior
-    - _Requirements: 21.1, 21.2, 21.3, 21.4, 21.6, 21.7_
+    - _Requirements: 21.1, 21.2, 21.3, 21.4, 21.6, 21.7, 21.8, 21.9_
 
 - [ ] 23. Update navigation to include new sections
   - [~] 23.1 Add navigation links for new sections
@@ -521,7 +531,53 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
     - Test responsive behavior with additional links
     - _Requirements: 1.2, 1.3_
 
-- [~] 24. Final integration and testing
+- [x] 24. Update content with new skills and hourly rates
+  - [x] 24.1 Add new skills to Skills section
+    - Add "Vibe coding" to Development Practices category with appropriate proficiency level
+    - Add "AI-assisted development" to Development Practices category with appropriate proficiency level
+    - Add "FastAPI" to Backend & Languages category with appropriate proficiency level
+    - Add "Supabase" to Frontend & Database category with appropriate proficiency level
+    - Add "React Native" to Frontend & Database category with appropriate proficiency level
+    - Add "Expo Go" to Frontend & Database category with appropriate proficiency level
+    - _Requirements: 8.6, 8.7, 8.8, 8.9_
+  
+  - [x] 24.2 Add hourly rates to Services section
+    - Add hourly rate for freelance development services
+    - Format rate display professionally (e.g., "$50/hour" or "₹4000/hour")
+    - Update technology list to include new skills (FastAPI, Supabase, React Native, Expo Go)
+    - Ensure rate is prominently displayed
+    - _Requirements: 19.2, 19.7, 19.8_
+  
+  - [x] 24.3 Add hourly rates to Tutoring section
+    - Add hourly rate for Java tutoring services
+    - Format rate display professionally (e.g., "$40/hour" or "₹3000/hour")
+    - Ensure rate is prominently displayed
+    - _Requirements: 20.6, 20.7_
+  
+  - [x] 24.4 Add hourly rates to Mobile Apps section
+    - Add hourly rate for mobile app development services
+    - Format rate display professionally (e.g., "$60/hour" or "₹5000/hour")
+    - Update technology descriptions to mention React Native and Expo Go where applicable
+    - Ensure rate is prominently displayed
+    - _Requirements: 21.3, 21.8, 21.9_
+  
+  - [ ]* 24.5 Write unit tests for updated content
+    - Test new skills appear in Skills section
+    - Test hourly rates display in all three sections
+    - Test rate formatting is consistent and professional
+    - Test new technology mentions appear correctly
+    - _Requirements: 8.6, 8.7, 8.8, 8.9, 19.7, 19.8, 20.6, 20.7, 21.8, 21.9_
+
+- [~] 25. Final checkpoint - Verify all updates
+  - Ensure all tests pass, ask the user if questions arise.
+  - Verify new skills appear in Skills section with correct categories
+  - Verify hourly rates display correctly in Services, Tutoring, and Mobile Apps sections
+  - Verify rate formatting is professional and consistent
+  - Test responsive behavior with updated content
+  - Run accessibility audit on updated sections
+  - Verify entrance animations work for updated content
+
+- [~] 26. Final integration and testing
   - Ensure all tests pass, ask the user if questions arise.
   - Run full test suite including new sections
   - Verify all 23 correctness properties are tested
@@ -537,15 +593,15 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
   - Validate sitemap.xml and robots.txt
   - Check page load performance on slow networks
 
-- [ ] 25. Integration and documentation
-  - [~] 25.1 Create integration tests for user flows
+- [ ] 27. Integration and documentation
+  - [~] 27.1 Create integration tests for user flows
     - Test complete page load and navigation flow
     - Test theme toggle persistence across reloads
     - Test scroll behavior and scroll-to-top
     - Test animation triggers during scroll
     - Test responsive behavior at different viewports
   
-  - [~] 25.2 Update project documentation
+  - [~] 27.2 Update project documentation
     - Document testing approach and coverage
     - Document component architecture
     - Document deployment process
@@ -578,3 +634,6 @@ The implementation uses React 18 with hooks for state management, CSS for stylin
 - Sitemap.xml and robots.txt must be properly configured
 - Test social media preview cards before deployment
 - Performance optimization is ongoing - monitor with Lighthouse and Core Web Vitals
+- Task 24 adds new content: skills (Vibe coding, AI-assisted development, FastAPI, Supabase, React Native, Expo Go) and hourly rates for all services
+- Hourly rates should be displayed professionally and consistently across all service sections
+- New skills should be categorized appropriately (Development Practices, Backend & Languages, Frontend & Database)

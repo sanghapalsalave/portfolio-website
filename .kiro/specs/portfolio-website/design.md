@@ -199,6 +199,12 @@ interface Skill {
 }
 ```
 
+**Categories:**
+- Backend & Languages: Java, Python, Spring Boot, FastAPI, etc.
+- DevOps & Cloud: AWS, Docker, Kubernetes, etc.
+- Frontend & Database: React, JavaScript, Supabase, React Native, Expo Go, etc.
+- Development Practices: Vibe coding, AI-assisted development
+
 **Rendering:**
 - Grid layout with responsive columns
 - Each skill shows name, percentage, and visual bar
@@ -261,8 +267,13 @@ interface ServicesSection {
     status: string;                 // "Open to Work" or similar
     badge: boolean;                 // Show availability badge
   };
-  technologies: string[];           // Python, Java, AWS, React, JS, etc.
+  technologies: string[];           // Python, Java, AWS, React, JS, FastAPI, Supabase, React Native, Expo Go, etc.
   description: string;              // Service description
+  pricing: {
+    hourlyRate: string;             // Hourly rate for freelance services
+    currency: string;               // Currency (e.g., "USD", "INR")
+    display: string;                // Formatted display string (e.g., "$50/hour")
+  };
   callToAction: {
     text: string;                   // CTA button text
     link: string;                   // Contact link or form
@@ -273,6 +284,7 @@ interface ServicesSection {
 **Visual Elements:**
 - Prominent "Open to Work" badge or indicator
 - Technology tags displayed as pills or badges
+- Clear hourly rate display with professional formatting
 - Clear call-to-action button
 - Professional service description
 
@@ -288,7 +300,9 @@ interface TutoringSection {
   format: string;                   // "One-on-One Calls"
   pricing: {
     isPaid: boolean;                // Indicates paid service
-    details?: string;               // Pricing info or "Contact for pricing"
+    hourlyRate: string;             // Hourly rate for tutoring
+    currency: string;               // Currency (e.g., "USD", "INR")
+    display: string;                // Formatted display string (e.g., "$40/hour")
   };
   description: string;              // Teaching approach and expertise
   booking: {
@@ -300,6 +314,7 @@ interface TutoringSection {
 
 **Visual Elements:**
 - Clear indication of paid service
+- Prominent hourly rate display with professional formatting
 - Scheduling/booking call-to-action
 - Expertise highlights
 - Professional teaching credentials
@@ -312,13 +327,18 @@ Showcases mobile applications developed.
 ```typescript
 interface MobileAppsSection {
   apps: MobileApp[];
+  pricing: {
+    hourlyRate: string;             // Hourly rate for mobile app development
+    currency: string;               // Currency (e.g., "USD", "INR")
+    display: string;                // Formatted display string (e.g., "$60/hour")
+  };
 }
 
 interface MobileApp {
   name: string;                     // App name
   description: string;              // App description
   screenshots: string[];            // Array of image URLs
-  technologies: string[];           // Tech stack (React Native, Flutter, etc.)
+  technologies: string[];           // Tech stack (React Native, Expo Go, Flutter, etc.)
   platforms: Platform[];            // iOS, Android, Web
   links: AppLink[];                 // Store links, demo links
   featured?: boolean;               // Highlight featured apps
@@ -341,7 +361,8 @@ interface AppLink {
 - Screenshot carousel or grid
 - Platform badges (iOS, Android)
 - Store links with icons
-- Technology tags
+- Technology tags (including React Native, Expo Go)
+- Prominent hourly rate display for mobile app development services
 - Responsive image display
 
 **Interactions:**
@@ -585,9 +606,9 @@ useEffect(() => {
 
 ### Property 10: Skill Bars Display Name and Proficiency
 
-*For any* skill in the skills section, the rendered skill bar should display both the skill name and the percentage proficiency level.
+*For any* skill in the skills section (including new skills like Vibe coding, AI-assisted development, FastAPI, Supabase, React Native, and Expo Go), the rendered skill bar should display both the skill name and the percentage proficiency level.
 
-**Validates: Requirements 8.2, 8.3**
+**Validates: Requirements 8.2, 8.3, 8.6, 8.7, 8.8, 8.9**
 
 ### Property 11: Skill Bar Width Matches Proficiency
 
@@ -651,21 +672,21 @@ useEffect(() => {
 
 ### Property 21: Services Section Display
 
-*For any* services section, the rendered output should include availability status, list of technologies, service description, and a call-to-action for inquiries.
+*For any* services section, the rendered output should include availability status, list of technologies (including FastAPI, Supabase, React Native, Expo Go), service description, hourly rate information, and a call-to-action for inquiries.
 
-**Validates: Requirements 19.1, 19.2, 19.3, 19.4**
+**Validates: Requirements 19.1, 19.2, 19.3, 19.4, 19.7, 19.8**
 
 ### Property 22: Tutoring Section Display
 
-*For any* tutoring section, the rendered output should include subject (Java), format (one-on-one), pricing indication, and booking/scheduling information.
+*For any* tutoring section, the rendered output should include subject (Java), format (one-on-one), hourly rate information, and booking/scheduling information.
 
-**Validates: Requirements 20.1, 20.2, 20.3, 20.4**
+**Validates: Requirements 20.1, 20.2, 20.3, 20.4, 20.6, 20.7**
 
 ### Property 23: Mobile App Cards Display Required Fields
 
-*For any* mobile app in the mobile apps section, the rendered card should include app name, description, screenshots, technology stack, and platform links.
+*For any* mobile app in the mobile apps section, the rendered card should include app name, description, screenshots, technology stack (including React Native, Expo Go where applicable), platform links, and hourly rate information for mobile app development services.
 
-**Validates: Requirements 21.2, 21.3, 21.4**
+**Validates: Requirements 21.2, 21.3, 21.4, 21.8, 21.9**
 
 ## Error Handling
 

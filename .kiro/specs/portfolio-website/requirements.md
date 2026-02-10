@@ -122,11 +122,15 @@ This document specifies the requirements for a personal portfolio website for Sa
 
 #### Acceptance Criteria
 
-1. THE Portfolio_System SHALL organize skills into categories (Backend & Languages, DevOps & Cloud, Frontend & Database)
+1. THE Portfolio_System SHALL organize skills into categories (Backend & Languages, DevOps & Cloud, Frontend & Database, Development Practices)
 2. WHEN displaying skills, THE Portfolio_System SHALL show each skill with a visual progress bar
 3. THE Skill_Bar SHALL display the skill name and percentage proficiency level
 4. THE Skill_Bar SHALL visually represent proficiency with a filled progress bar matching the percentage
 5. THE Portfolio_System SHALL display skills in a responsive grid layout
+6. THE Portfolio_System SHALL include "Vibe coding" and "AI-assisted development" in the Development Practices category
+7. THE Portfolio_System SHALL include "FastAPI" in the Backend & Languages category
+8. THE Portfolio_System SHALL include "Supabase" in the Frontend & Database category
+9. THE Portfolio_System SHALL include "React Native" and "Expo Go" in the Frontend & Database category
 
 ### Requirement 9: Projects Showcase
 
@@ -283,11 +287,13 @@ This document specifies the requirements for a personal portfolio website for Sa
 #### Acceptance Criteria
 
 1. THE Portfolio_System SHALL display a Services section highlighting freelance availability
-2. THE Services section SHALL list available technologies (Python, Java, AWS, React, JavaScript, etc.)
+2. THE Services section SHALL list available technologies (Python, Java, AWS, React, JavaScript, FastAPI, Supabase, React Native, Expo Go, etc.)
 3. THE Services section SHALL include a clear call-to-action for project inquiries
 4. THE Services section SHALL display contact information or a contact form link
 5. THE Services section SHALL be visually distinct with appropriate styling
 6. THE Services section SHALL include an "Open to Work" indicator or badge
+7. THE Services section SHALL display hourly rate information for freelance development services
+8. WHEN displaying hourly rates, THE Services section SHALL present the rate in a clear, professional format
 
 ### Requirement 20: Java Tutoring Services Section
 
@@ -300,7 +306,8 @@ This document specifies the requirements for a personal portfolio website for Sa
 3. THE Tutoring section SHALL include information about one-on-one call format
 4. THE Tutoring section SHALL provide a way to schedule or inquire about sessions (contact link, calendar link, or booking form)
 5. THE Tutoring section SHALL highlight Java expertise and teaching approach
-6. THE Tutoring section SHALL include pricing information or a note to contact for pricing
+6. THE Tutoring section SHALL display hourly rate information for tutoring services
+7. WHEN displaying hourly rates, THE Tutoring section SHALL present the rate in a clear, professional format
 
 ### Requirement 21: Mobile Applications Showcase
 
@@ -310,8 +317,10 @@ This document specifies the requirements for a personal portfolio website for Sa
 
 1. THE Portfolio_System SHALL display a Mobile Apps section showcasing developed applications
 2. WHEN displaying mobile apps, THE Portfolio_System SHALL show app name, description, and screenshots/images
-3. THE Mobile Apps section SHALL include technology stack used for each app
+3. THE Mobile Apps section SHALL include technology stack used for each app (including React Native, Expo Go where applicable)
 4. THE Mobile Apps section SHALL provide links to app stores (Google Play, App Store) where applicable
 5. THE Mobile Apps section SHALL include demo videos or interactive previews where available
 6. THE Portfolio_System SHALL display mobile apps in a card-based or gallery layout
 7. THE Mobile Apps section SHALL be responsive and display well on all device sizes
+8. THE Mobile Apps section SHALL display hourly rate information for mobile app development services
+9. WHEN displaying hourly rates, THE Mobile Apps section SHALL present the rate in a clear, professional format
