@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sanghapalsalave.github.io/portfolio-website/sitemap.xml
+Sitemap: https://sanghapalsalave.com/sitemap.xml
