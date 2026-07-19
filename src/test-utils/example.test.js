@@ -8,8 +8,8 @@
  * - Test helpers and mocks
  */
 
-import { render, screen } from '@testing-library/react';
-import fc from 'fast-check';
+import { cleanup, render, screen } from '@testing-library/react';
+import fc from 'fast-check/lib/cjs/fast-check';
 import {
   setupLocalStorageMock,
   themeArbitrary,
@@ -164,6 +164,7 @@ describe('Example Property-Based Tests', () => {
     it('should render correct width for any valid proficiency', () => {
       fc.assert(
         fc.property(skillArbitrary, (skill) => {
+          cleanup();
           render(<ExampleSkillBar name={skill.name} proficiency={skill.proficiency} />);
           
           const bar = screen.getByTestId('skill-bar-fill');

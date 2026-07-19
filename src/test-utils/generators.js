@@ -5,7 +5,7 @@
  * for property-based testing of the portfolio website.
  */
 
-import fc from 'fast-check';
+import fc from 'fast-check/lib/cjs/fast-check';
 
 /**
  * Generator for theme preferences (boolean)

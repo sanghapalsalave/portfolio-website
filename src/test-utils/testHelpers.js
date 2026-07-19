@@ -60,7 +60,14 @@ export class LocalStorageMock {
  */
 export function setupLocalStorageMock() {
   const localStorageMock = new LocalStorageMock();
-  global.localStorage = localStorageMock;
+  Object.defineProperty(window, 'localStorage', {
+    configurable: true,
+    value: localStorageMock,
+  });
+  Object.defineProperty(global, 'localStorage', {
+    configurable: true,
+    value: localStorageMock,
+  });
   return localStorageMock;
 }
 

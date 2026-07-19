@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders business-focused header', () => {
   render(<App />);
-  const headingElement = screen.getByText(/I help small businesses look professional online/i);
+  const headingElement = screen.getByText(/Websites, Google presence, and AI workflows/i);
   expect(headingElement).toBeInTheDocument();
 });
